@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery卷轴打开动画特效</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<nav class="layer">
+  <ul>
+    <li><label for="pageOne">诀别诗</label></li>
+    <li><label for="pageTwo">生辰记</label></li>
+    <li><label for="pageThree">雨丝结</label></li>
+    <li><label for="pageFour">静夜思</label></li>
+    <li><label for="pageFive">夜微凉</label></li>
+  </ul>
+</nav>
+<input type="checkbox" name="hamburger" id="hamburger" />
+
+<label for="hamburger"> 
+  <ul><li></li><li></li><li></li></ul>
+</label>
+<!-- 汉堡按钮 -->
+
+<section class="front layer home">
+ 
+  <input type="radio" name="nav" id="pageOne" class="home" />
+  <div id="One">
+  <div class="content">
+	<div class="l-pic-index"></div>
+	<div class="r-pic-index"></div>
+	<div class="l-bg-index"></div>
+	<!-- <div class="r-bg-index"></div> -->
+	<div class="main-index">
+		<div class="intro-text">
+		<h3>诀别诗</h3>
+<p>诀别诗&nbsp;&nbsp;两三行</p>
+<p>一纸离别&nbsp;&nbsp;泪满眶</p>
+<p>唱离歌&nbsp;&nbsp;心悲凉</p>
+<p>前路知己&nbsp;&nbsp;在何方</p>
+<p>别母校&nbsp;&nbsp;忆轻狂</p>
+<p>长大成人&nbsp;&nbsp;也彷徨</p>
+<p>不再见&nbsp;&nbsp;也别忘</p>
+<p>同学情谊&nbsp;&nbsp;比天长</p>
+<p>忆初恋&nbsp;&nbsp;心荡漾</p>
+<p>至今不忘&nbsp;&nbsp;愿安康</p>
+<p>老照片&nbsp;&nbsp;全都是</p>
+<p>天真模样&nbsp;&nbsp;无悲伤</p>
+<p>念父母&nbsp;&nbsp;养育我</p>
+<p>辛苦操劳&nbsp;&nbsp;不敢忘</p>
+<p>人生路&nbsp;&nbsp;何其长</p>
+<p>相信自己&nbsp;&nbsp;勇敢闯</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--王智福</p>
+</div>
+</div>
+</div>
+  </div>
+  
+<input type="radio" name="nav" id="pageTwo" />
+  <div id="Two">
+    <div class="content">
+	<div class="l-pic-index"></div>
+	<div class="r-pic-index"></div>
+	<div class="l-bg-index"></div>
+	<div class="r-bg-index"></div>
+	<div class="main-index">
+		<div class="intro-text">
+		<h3>生辰记</h3>
+<p>我愿提笔，挥毫一曲</p>
+<p>很想恋你，懵懂年纪</p>
+<p>快要忘记，曾经点滴</p>
+<p>乐观的你，常带笑意</p>
+<p>感到温暖，让人亲近</p>
+<p>谢谢时光，我遇见你</p>
+<p>有一首歌，表达心意</p>
+<p>你若成风，我要化雨</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--王智福</p>
+    </div>
+  </div>
+  </div>
+ </div>
+ 
+  <input type="radio" name="nav" id="pageThree" />
+  <div id="Three">
+     <div class="content">
+	<div class="l-pic-index"></div>
+	<div class="r-pic-index"></div>
+	<div class="l-bg-index"></div>
+	<div class="r-bg-index"></div>
+	<div class="main-index">
+		<div class="intro-text">
+		<h3>雨丝结</h3>
+<p>遇见你的街角，做梦都在那里环绕</p>
+<p>想起你的温柔，就是我万能的解药</p>
+<p>每当看到你笑，嘴角不自觉在上翘</p>
+<p>空气弥漫的香，手心还残留你芬芳</p>
+<p>曾在心里发誓，在今生只为你牵挂</p>
+<p>奈何情深缘浅，距离从此天各一方</p>
+<p>我好恨我自己，没有勇气说句爱你</p>
+<p>欢乐总是短暂，总以为时间还很多</p>
+<p>回头翻阅相片，还是那个完美的你</p>
+<p>嘴角挂着笑呢，心却猛地抖了一下</p>
+<p>也许失落沉沦，不是我想要的结果</p>
+<p>但是心的空缺，有谁能来填补缝合</p>
+<p>爱情这种东西，像是戒不掉的毒药</p>
+<p>回忆绕来绕去，都快要把自己忘掉</p>
+<p>文章到此为止，思绪却似绵绵细雨</p>
+<p>梦里花落知多少，情到深处自难忘</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--王智福</p>
+    </div>
+  </div> 
+  </div>
+  </div>
+  
+  <input type="radio" name="nav" id="pageFour" />
+  <div id="Four">
+       <div class="content">
+	<div class="l-pic-index"></div>
+	<div class="r-pic-index"></div>
+	<div class="l-bg-index"></div>
+	<div class="r-bg-index"></div>
+	<div class="main-index">
+		<div class="intro-text">
+		<h3>静夜思</h3>
+<p>遥望那天边，可惜看不见，相离莫相忘。</p>
+<p>远寄我想念，明月映窗前，思绪如乱线。</p>
+<p>那清明的夜，白洁的霜天，之后可会见？</p>
+<p>边城的小径，我不眠的夜，情深似梦蝶。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--王智福</p>
+    </div>
+  </div> 
+  </div>
+  </div>
+  <input type="radio" name="nav" id="pageFive" />
+  <div id="Five">
+         <div class="content">
+	<div class="l-pic-index"></div>
+	<div class="r-pic-index"></div>
+	<div class="l-bg-index"></div>
+	<div class="r-bg-index"></div>
+	<div class="main-index">
+		<div class="intro-text">
+		<h3>夜微凉</h3>
+<p>又到了零点零一分</p>
+<p>整个世界都熄了灯</p>
+<p>剩我一个黯淡灵魂</p>
+<p>寂寞太会见缝插针</p>
+<p>我拿什么和它抗衡</p>
+<p>幸福的人睡得安稳</p>
+<p>痛苦的人还是醒着</p>
+<p>梦醒了是一座空城</p>
+<p>没一个怀抱可投奔</p>
+<p>睡醒了天亮就忘了</p>
+<p>那个昨夜离别的冷</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--王智福</p>
+</div>
+  </div> 
+  </div>
+  </div>
+
+</section>
+
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	 $('.l-pic-index,.r-pic-index').click(function(){
+	 var width=$(".l-bg-index").css('width') 
+	 
+	   if(width=='25px'){
+			//卷轴展开动画效果
+			$(".l-pic-index").animate({'left':'97px','top':'-29px'},1300);
+			$(".r-pic-index").animate({'right':'-23px','top':'-29px'},1450);
+			$(".l-bg-index").animate({'width':'360px','left':'130px'},1300);
+            $(".main-index").fadeIn(5000); 
+
+      }else{
+     		$(".l-pic-index").animate({'left':'260px','top':'-29px'},1300);
+			$(".r-pic-index").animate({'right':'140px','top':'-29px'},1450);
+			$(".l-bg-index").animate({'width':'25px','left':'300px'},1330);
+		    $(".main-index").fadeOut(10);
+     }  
+			
+		});
+</script>
+
+</body>
+</html>

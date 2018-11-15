@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>鼠标坐标 跟随十字JS特效代码</title>
+<style>
+#html{
+padding:10px;
+}
+</style>
+</head>
+<body style="margin: 0;">
+ <div id="html"></div>
+ <script type="text/javascript">
+ //
+ var ox = document.createElement('div');
+ var oy = document.createElement('div');
+ ox.style.width = '100%';
+ ox.style.height = '0.1px';
+ ox.style.border = '1px dashed black';
+ ox.style.borderTop = 'none';
+ ox.style.position = 'fixed';
+ ox.style.left = 0;
+ document.body.appendChild(ox);
+ oy.style.height = '100%';
+ oy.style.width = '0.1px';
+ oy.style.border = '1px dashed black';
+ oy.style.borderLeft = 'none';
+ oy.style.position = 'fixed';
+ oy.style.top = 0;
+ document.body.appendChild(oy);
+ document.onmousemove = function(e){
+ var e = e || event;
+ var x = e.pageX;
+ var y = e.pageY;
+ ox.style.top = y + 'px';
+ oy.style.left = x + 'px';
+ document.getElementById('html'). innerHTML = '鼠标坐标'+'<br/>&nbsp;x : ' + x + '<br/>&nbsp;y : ' + y;
+ };
+ </script>
+</body>
+</html>

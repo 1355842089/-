@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>鼠标跟随</title>
+<style>
+.d1{
+width:100px;
+height:100px;
+border-radius:50%;
+box-shadow:2px 2px 3px gray;
+position:absolute;
+background:linear-gradient(to right,rgba(255,0,0,0),rgba(255,0,0,1));
+}
+</style>
+<script>
+function getPos(ev){
+	var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+	var scrollLeft=document.documentElement.scrollLeft||document.body.scrollLeft;
+	
+  
+	return {x: ev.clientX+scrollLeft, y: ev.clientY+scrollTop};
+}
+
+document.onmousemove=function (ev){
+  var oEvent=ev||event;
+  var pos=getPos(oEvent);
+  var div=document.querySelector('.d1');
+  
+  div.style.left=pos.x-40+'px';
+  div.style.top=pos.y-40+'px';
+}
+</script>
+</head>
+
+<body style="height:2000px;">
+<div class="d1"></div>
+</body>
+</html>

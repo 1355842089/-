@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh" class="demo2 no-js">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>YY happy Birthday</title>
+<!-- 必要代码 -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.let_it_snow.js"></script>
+<style>
+body{margin:0;padding:0;background:#ffe;font-size:26px;overflow:auto}
+#mainDiv{width:400px;height:100%;margin: 0 auto;margin-top: 20px;position:absolute;text-align:center;}
+#loveHeart{float:left;width:400px;height:625px}
+#garden{width:100%;height:100%}
+#elapseClock{text-align:right;font-size:28px;margin-top:10px;margin-bottom:10px}
+#words{font-family:"sans-serif";width:400px;font-size:24px;color:#666}
+#messages{display:none}
+#elapseClock .digit{font-family:"digit";font-size:36px}
+#loveu{padding:5px;font-size:22px;margin-top:80px;margin-right:120px;text-align:right;display:none}
+#loveu .signature{margin-top:10px;font-size:20px;font-style:italic}
+#clickSound{display:none}
+#code{float:left;width:400px;height:400px;color:#666;font-family:"Consolas","Monaco","Bitstream Vera Sans Mono","Courier New","sans-serif";font-size:18px}
+#code .string{color:#2a36ff}
+#code .keyword{color:#E70048;font-weight:bold}
+#code .keyword1{color:#E70048;font-weight:bold;font-size:30px;text-align:justify;}
+#code .placeholder{margin-left:15px}#code .space{margin-left:7px}
+#code .comments{color:#3f7f5f}
+#copyright{margin-top:10px;text-align:center;width:100%;color:#666}
+#errorMsg{width:100%;text-align:center;font-size:24px;position:absolute;top:100px;left:0}
+#copyright a{color:#666}
+.imga{position:absolute;top:20%;left:2%;z-index:-1;opacity:0.5;}
+.chest {
+		width: 400px;
+		height: 400px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	.heart {
+		position: absolute;
+		z-index: 2;
+		background: linear-gradient(-90deg, #F50A45 0%, #d5093c 40%);
+		animation: beat 0.7s ease 0s infinite normal;
+	}
+
+	.heart.center {
+		background: linear-gradient(-45deg, #B80734 0%, #d5093c 40%);
+	}
+
+	.heart.top {
+		z-index: 3;
+	}
+
+	.side {
+		top: 100px;
+		width: 180px;
+		height: 180px;
+		border-radius: 110px;
+	}
+
+	.center {
+		width: 183px;
+		height: 180px;
+		bottom: 51.7px;
+		left: 112.4px;
+		transform: rotateZ(225deg);
+		/*transform: rotate(45deg);*/
+	}
+
+	.left {
+		left: 45px;
+	}
+
+	.right {
+		right: 35px;
+	}
+
+
+	@keyframes beat {
+		0% {
+			transform: scale(1) rotate(225deg);
+			box-shadow:0 0 40px #d5093c;
+		}
+
+		50% {
+			transform: scale(1.1) rotate(225deg);
+			box-shadow:0 0 70px #d5093c;
+		}
+		100% {
+			transform: scale(1) rotate(225deg);
+		box-shadow:0 0 40px #d5093c;
+		}
+	}
+</style>
+<!--打字-->
+<script>
+(function($) {
+	$.fn.typewriter = function() {
+		this.each(function() {
+			var $ele = $(this), str = $ele.html(), progress = 0;
+			$ele.html('');
+			var timer = setInterval(function() {
+				var current = str.substr(progress, 1);
+				if (current == '<') {
+					progress = str.indexOf('>', progress) + 1;
+				} else {
+					progress++;
+				}
+				$ele.html(str.substring(0, progress) + (progress & 1 ? '_' : ''));
+				if (progress >= str.length) {
+					clearInterval(timer);
+				}
+			},77);
+		});
+		return this;
+	};
+})(jQuery);
+</script>
+<script type="text/javascript">
+$(function(){
+	$("#code").typewriter();
+})
+</script>
+</head>
+<body>
+<div class="main" style="display:none;">
+	<div class="page_container">
+		<canvas width="100%" height="100%" class="snow"></canvas>
+	</div>
+</div>
+
+<div id="mainDiv" style="z-index:999;">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*2018—06-03 01:31:40</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Boy name = <span class="keyword">Mr</span> Wang<br />
+			Girl name = <span class="keyword">Mrs</span> Liu<br />
+			<span class="comments">// 530天前他们坠入了爱河. </span><br />
+			这个男孩爱这个女孩;<br />
+			<span class="comments">// 他们彼此相爱.</span><br />
+			这个女孩也爱这个男孩;<br />
+			<span class="comments">// 随着时间的推移.</span><br />
+			这个男孩不能和女孩分开;<br />
+			<span class="comments">// 与此同时.</span><br />
+			这个女孩也不能和男孩分开;<br />
+			<!-- <span class="comments"><img class="imga" src="images/cs.png"/></span> -->
+			<span class="comments">// 哪怕雨和雪都在天空盘旋.</span><br />
+			<span class="comments">// 也要赶到你的身边为你撑伞.</span><br />
+			<span class="keyword">这个男孩</span> 很 <span class="keyword">高兴</span>;<br />
+			<span class="keyword">这个女孩</span> 也很 <span class="keyword">高兴</span>;<br />
+			<span class="placeholder"/><span class="comments">// 不去想遥远的未来.</span><br />
+			<span class="placeholder"/><span class="comments">// 只想现在能拥你入怀.</span><br />
+			<span class="placeholder"/>这个男孩只有一个梦想;<br />
+			<span class="comments">// 男孩想要这个女孩幸福.</span><br />
+			<span style="width:100%;height:1400px;opacity:0;"><img src="http://qxw1590260005.my3w.com/images/china_pavilion.jpg" /></span><br />
+			<span style="width:100%;height:1400px;opacity:0;"><img src="http://qxw1590260005.my3w.com/images/china_pavilion.jpg" /></span><br />
+			我想说:<br />
+			<span class="keyword1">宝贝, 我永远爱你!</span><br />
+			<span class="keyword">
+			<div class="chest">
+	         <div class="heart left side top"></div>
+	         <div class="heart center"></div>
+	         <div class="heart right side"></div>
+            </div></span>
+		</div>
+	</div>
+</div>
+
+<script>
+var Amin=document.querySelector('.main');
+var Mdiv=document.querySelector('#mainDiv');
+var Key=document.querySelector('.keyword1');
+
+	 setTimeout(function(){
+	   Amin.style.display ="block";
+	   document.body.style.background='#222';
+	 }, 19600);
+	 
+	setTimeout(function(){
+	   Amin.style.display ="none";
+	   document.body.style.background='#ffe';
+	 }, 30000); 
+	 
+	setTimeout(function(){
+	   Mdiv.style.top="-900px";
+	   Key.style.fontSize="30px";
+	 }, 35000); 
+</script>
+<script type="text/javascript">
+$(document).ready( function() {
+	$("canvas.snow").let_it_snow({
+		speed: 8
+	});
+});
+</script>
+</body>
+</html>

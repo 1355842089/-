@@ -1,0 +1,57 @@
+/* 分界线-共同部分 */
+
+@font-face    /*导入字体*/   
+{
+	font-family: hyngj;   /*命名字体*/
+	src: url('../images/hyngj.ttf');    /*字体路径*/
+}
+*{padding:0;margin:0;}
+body {background:#fff url(../images/bz.png) repeat top left;font-family: hyngj;font-size:10px;}/*使用字体*/
+
+.by-head{width:100%;height:6rem;background:black;box-shadow:0.1rem 0.3rem 1rem gray;font-size:1.2rem;}
+
+.by-head h1{float:left;color:white;margin:1.4rem 5.8rem;border-radius:6rem;border:0.2rem solid white;padding:0.2rem;}
+.hebut1 h2,.hebut2 h2{float:left;color:white;line-height:5rem;margin:0.5rem 0 0 17rem;}
+.hebut1 h2:hover,.hebut2 h2:hover{border-bottom:0.5rem solid #FF4083;transition:0.3s ease-in;padding-bottom:-2rem;}
+
+#playbtn{width:40px;height:40px;position:absolute;top:27px;right:140px;}
+
+#fhdd{position:fixed;bottom:50px;right:50px;width:50px;height:50px;border:1px solid black;border-radius:50px;display:none;}
+#fhdd:before{content:"▲";font-size:2.5rem;color:black;position:relative;top:-1.5px;left:5.5px;}
+
+/* 弹窗 */
+#tcs{width:300px;height:400px;background:white;border:3px solid #000;border-radius:0 0 5px 5px;position:absolute;top:93.6px;left:10px;box-shadow:0.2rem 0.2rem 0.5rem gray;animation:mymove 1s ease;overflow:hidden;z-index:99;}
+
+/* 分界线-散诗部分 */
+.bdmain{text-align:center;width:80%;font-size:1.5rem;line-height:3rem;clear:both;padding:10%;}
+.bdmain h4{font-size:1rem;color:#595959;margin-top:2rem;text-align:left;text-indent:1.5rem;transform: translate(2rem,5rem);}
+
+hr{border:0.01rem dotted black;}
+
+
+
+/* 分界线-随笔部分 */
+.tile{transform:translate(0,-3rem);}
+.boul{font-size:1.3rem;text-align:left;}
+
+
+
+ 
+
+
+
+/*手机部分*/
+@media screen and (max-width:415px){
+.by-head{height:4rem;font-size:0.8rem;}	
+.by-head h1{margin:0.98rem 0.8rem;border-radius:6rem;border:0.1rem solid white;padding:0.1rem;}	
+.hebut1 h2,.hebut2 h2{line-height:3rem;margin:0.7rem 0 0 3rem;}
+.hebut1 h2:hover,.hebut2 h2:hover{border-bottom:0.3rem solid #FF4083;transition:0.3s ease-in;}	
+#playbtn{width:30px;height:30px;position:absolute;top:16px;right:20px;}	
+.bdmain h4{transform:none;}	
+#fhdd{position:fixed;bottom:40px;right:30px;width:30px;height:30px;border:1px solid black;border-radius:50px;display:none;}
+#fhdd:before{content:"▲";font-size:1.8rem;color:black;position:relative;top:-1.5px;left:1px;}
+/* 分界线-随笔部分 */
+.tile{transform:translate(0,-1.9rem);}
+
+#tcs{border:1px solid #000;position:absolute;top:63px;left:10px;}
+}

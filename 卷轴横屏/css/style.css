@@ -1,0 +1,262 @@
+/*通用样式*/
+body,ul,li,p,h1,h2,h3,h4,h5{
+    margin:0;
+    padding:0;
+    font-size:100%;
+}
+
+@font-face    /*导入字体*/   
+{
+	font-family: hyngj;   /*命名字体*/
+	src: url('../images/hyngj.ttf');    /*字体路径*/
+}
+
+body {
+  font-family: hyngj;
+  text-transform: uppercase;
+  height: 100%;
+  overflow: hidden;
+}
+
+input[type="checkbox"]#hamburger {
+  position: fixed;
+  top: -999%;
+  left: -999%;
+}
+
+label[for="hamburger"] {
+  display: block;
+  position: fixed;
+  top: 50px;
+  right: 10px;
+  height: 50px;
+  width: 50px;
+  background: transparent;
+  z-index: 1030;
+  cursor: pointer;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  box-shadow: 1px 2px 5px #464647;
+}
+
+label[for="hamburger"] > ul {
+  width: 100%;
+  height: 60%;
+  position: Absolute;
+  top: 20%;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+label[for="hamburger"] > ul > li {
+  width: 25px;
+  height: 3px;
+  background: #464647;
+  margin: auto;
+  transition: all .4s ease;
+  position: relative;
+  top: 0;
+  bottom: 0;
+}
+
+input[type="checkbox"]:checked#hamburger + label + .front {
+  transform: perspective(700px) scale(0.5) translateX(-16.66%) rotateY(30deg);
+}
+
+input[type="checkbox"]:checked#hamburger + label + .front > h1 {
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked#hamburger + label > ul > li:first-child {
+  transform: rotate(45deg);
+  top: 45%;
+}
+
+input[type="checkbox"]:checked#hamburger + label > ul > li:nth-child(2) {
+  display: none;
+}
+
+input[type="checkbox"]:checked#hamburger + label > ul > li:last-child {
+  transform: rotate(-45deg);
+  bottom: 45%;
+  left: 0;
+}
+
+.layer {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: transform .4s;
+  transform: perspective(800px) scale(1) translateX(0) rotateY(0);
+  transform-style: preserve-3d;
+}
+
+nav {
+  vertical-align: center;
+}
+
+nav ul {
+  padding-left: 66.66%;
+  font-size: larger;
+  line-height: 2;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+nav ul li label {
+  display: Block;
+  color: gray;
+  cursor: pointer;
+  padding: 5px;
+  margin-bottom: 10%;
+}
+
+nav ul li label:hover {
+  color: black;
+}
+
+.front {
+    font-family: 'Microsoft YaHei UI', 'Microsoft YaHei', SimSun, 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+    font-size: 14px;
+    background:url(../images/df.jpg) no-repeat fixed bottom center;
+	background-size: cover;
+}
+
+.front > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .4s ease;
+}
+
+//样式
+.front > div#One {}
+
+.front > div#Two {
+    background:url(../images/bg.jpg) no-repeat fixed bottom center;
+	background-size: cover;
+}
+
+.front > div#Three {
+    background:url(../images/bg2.jpg) no-repeat fixed bottom center;
+	background-size: cover;
+}
+
+.front > div#Four {
+    background:url(../images/bg3.jpg) no-repeat fixed bottom center;
+	background-size: cover;
+}
+
+.front > div#Five {
+    background:url(../images/bg4.jpg) no-repeat fixed bottom center;
+	background-size: cover;
+}
+
+input[type="radio"] {
+  position: fixed;
+  top: -999%;
+  left: -999%;
+}
+
+input[type="radio"]:checked + div {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+img{
+    border:0;
+}
+
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+/*content*/
+.content{
+    position: relative;
+	left:-100px;
+    width: 500px;
+    height: 460px;
+    margin: 230px auto 0 auto;
+}
+.l-pic-index{
+	/*display:none;*/
+    position: absolute;
+    left: 260px;
+    top: -29px;
+    z-index:2;
+    width:50px;
+    height:460px;
+    background: url("../images/j1.png") no-repeat right 0;
+}
+.r-pic-index{
+	/*display:none;*/
+    position: absolute;
+    right: 140px;
+    top: -29px;
+    z-index: 2;
+    width:50px;
+    height:460px;
+    background: url("../images/j4.png") no-repeat left 0;
+}
+.l-bg-index{
+    position: absolute;
+    top: -3px;
+    left: 285px;
+    z-index: 1;
+    width: 25px;
+    height: 459px;
+    background: url("../images/j2.png") right 0 no-repeat;
+}
+.main-index{
+    display: none;
+    overflow: hidden;
+    zoom:1;
+    position: absolute;
+    z-index: 5;
+    width:520px;
+    height:245px;
+    left:-58px;
+    top: 20px;
+    color: #2e2e2e;
+	cursor:pointer;
+	font-size:5px;
+}
+.intro-text{
+    margin: 0 auto;   
+    height: 140px;  
+    width: 520px;
+	font-size:5px;	
+}
+p,h3,.p{
+	font-family: hyngj;
+	font-size:13px;
+	text-align:center;
+	line-height:17px;
+	height:240px;
+	float:right;
+	writing-mode: vertical-lr;/*从左向右 从右向左是 writing-mode: vertical-rl;*/    
+    writing-mode: tb-lr;
+}
+

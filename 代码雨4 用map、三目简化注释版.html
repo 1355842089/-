@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<title>代码雨</title>
+	<style>
+	   body{background:#333;}
+	</style>
+</head>
+<body>
+  <div id="div1" align="center" style=" position:fixed; left:0; top:0px; width:100%; height:100%;">
+    <canvas id="qq" width="500" height="500">您的浏览器不支持，请使用Google或IE9以上的浏览器</canvas>
+    <button id="bb" onclick="ss()" style="position:absolute;top:30px;right:30px;border-radius:15px;color:#fff;background:rgba(0,0,0,0.05);line-height:2e1px;" >启动</button>
+  </div>
+
+<script>
+  var q = document.getElementById("qq");
+  var b = document.getElementById("bb");       //获取canvas和按钮元素并创建变量，这步省去也可以用
+  var width = q.width = screen.width;
+  var height = q.height = screen.height;       //将屏幕高、宽赋给canvas画板并创建变量
+  var ctx = q.getContext('2d');                //创建2d画板
+  var nus = Array(300).join(0).split("");      //(重点)创建空数组(300个).将数组作为字符串输出(字符).转为数组(分隔)。
+  var ck=0;
+  
+function sd(){    
+
+      ctx.fillStyle = 'rgba(0,0,0,.05)';
+      ctx.fillRect(0, 0, width, height);       //反复生成opacity为0.5的半透明黑色背景,底下的就更暗，就有了层次感
+      ctx.fillStyle = '#0f0';          
+      ctx.font = '12px Georgia';               //画板字体颜色样式
+		
+	nus.map(function (y, index) {       //(重点)map数组遍历函数，数组里面每一个元素都要执行后面的function
+
+		text = String.fromCharCode(1e2+Math.random()*300);       //将后面的随机数字转换为Unicode字符
+	    var x = (index * 10) + 10;
+
+		nus[index] = (y > 1e1 + Math.random() * 1e4) ? 0 : y+ 10;     //用x、y轴顺序确定显示字母的位置。
+		//(重点)"? :"三目操作符,括号里面为条件，条件符合输出"?"后面的，不符合输出":"后面的
+		ctx.fillText(text, x, y);        //将随机生成的字符和x、y轴赋给canvas画板文本
+	});	
+	if(ck>4){                            //点击四次就会执行
+    ctx.clearRect(0,0,width,height);           //清除画板
+	}
+
+};
+
+function ss(){
+
+   var a=setInterval(sd, 33);         //点击就会执行定时器a，越点越快
+   	   b.innerHTML="加速";           //将按钮的文本改变
+	   ck=ck+1;                     //每点击一次就会+1
+	
+     if(ck>3){                     //点击三次就会执行
+	 b.innerHTML="清除";      
+	 clearInterval(a);            //清除定时器a
+	 }
+	 
+}
+
+</script>
+</body>
+</html>
+
+
+ 

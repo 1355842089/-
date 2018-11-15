@@ -1,0 +1,60 @@
+#position {
+	height:40px;
+	line-height:40px;
+	border-top:2px solid #f18336;
+	color:#979693;
+}
+#position a{
+	color:#333333;
+}
+#list {
+	border:1px solid #ededed;
+	padding:0 0 90px 0;
+	
+}
+#list .listTitle {
+	height:32px;
+	background:url(../images/category_tit.gif) repeat-x;
+}
+#list .listTitle .sort {
+	float:right;
+	width:205px;
+	height:20px;
+	margin:6px 20px 0 0;
+}
+#list .listTitle h2 {
+	width:100px;
+	float:left;
+	color:#666;
+	line-height:32px;
+	text-indent:15px;
+}
+#list .imgList ul li {
+	width:234px;
+	float:left;
+	text-align:center;
+} 
+#list .imgList ul li p {
+	color:#979693;
+}
+#list .imgList ul li p.p1 {
+	text-decoration:line-through;
+}
+#list .imgList ul li p.p2 {
+	color:#F6835D;
+}
+#list .imgList ul li img.litpic {
+	margin-top:50px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+

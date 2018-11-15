@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script  src="http://qxw1590260005.my3w.com/js/TweenMax.min.js"></script>
+<script  src="http://qxw1590260005.my3w.com/js/jquery-3.3.1.js"></script>
+<title>TweenMax 弹性小球动画</title>
+<style>
+body, html {
+  height: 100%;
+}
+
+body {
+  background: #252525;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+svg:not(:root) {
+  overflow: visible;
+}
+
+svg {
+  height: 14px;
+  width: 100%;
+}
+svg circle {
+  fill: #87ce02;
+}
+
+</style>
+</head>
+<body>
+
+<svg version="1.1" viewBox="0 0 100 100">
+  <circle cx="-400" cy="50" r="40"/>
+  <circle cx="-400" cy="50" r="40"/>
+  <circle cx="-250" cy="50" r="40"/>
+  <circle cx="-100" cy="50" r="40"/>
+  <circle cx="-100" cy="50" r="40"/>
+  <circle cx="50" cy="50" r="40"/>
+  <circle cx="200" cy="50" r="40"/>
+  <circle cx="200" cy="50" r="40"/>
+  <circle cx="350" cy="50" r="40"/>
+  <circle cx="500" cy="50" r="40"/>
+  <circle cx="500" cy="50" r="40"/>
+  <circle cx="650" cy="50" r="40"/>
+</svg>
+<script>
+$(function(){
+var loader = new TimelineMax({ repeat: -1, yoyo: true }),
+    circles = $('svg circle'),
+    stagger_options = {
+      opacity: 0,
+      y: -800,
+      ease: Elastic.easeInOut
+    };
+
+loader.staggerTo(circles, 0.875, stagger_options, 0.025);
+})
+</script>
+
+</body>
+</html>
